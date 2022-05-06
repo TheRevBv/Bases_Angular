@@ -5,39 +5,14 @@
 <div class="container">
   <div class="roww">
     <div class="coll">
-      <h3>Personajes</h3>
-      <hr />
-      <ul class="list-group">
-        <li>Krilin - 700</li>
-        <li>Goku - 15,000</li>
-        <li>Vegeta - 8,500</li>
-      </ul>
+      <app-personajes [data]="personajes"> </app-personajes>
     </div>
     <div class="coll">
-      <h3>Agregar</h3>
-      <hr />
-      <form (ngSubmit)="agregar()">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombre"
-            aria-describedby="emailHelp"
-            placeholder="Nombre"
-          />
-        </div>
-        <div class="form-group">
-          <label for="poder">Poder</label>
-          <input
-            type="text"
-            class="form-control"
-            id="password"
-            placeholder="Poder"
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Agregar</button>
-      </form>
+      <app-agregar [data]="personajes" [nuevo]="nuevo">
+        <!-- [nuevo]="nuevo" -->
+      </app-agregar>
     </div>
   </div>
 </div>
+<!-- [value]="nuevo.nombre"
+            (input)="capturarNombre($event)" -->
