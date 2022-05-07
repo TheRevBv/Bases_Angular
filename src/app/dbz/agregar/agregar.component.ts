@@ -7,7 +7,7 @@ import { Personaje } from '../interfaces/personaje';
   styleUrls: ['./agregar.component.css'],
 })
 export class AgregarComponent {
-  @Input('data') personajes: Array<Personaje> = [];
+  // @Input('data') personajes: Array<Personaje> = [];
   @Input() nuevo: Personaje = {
     nombre: '',
     poder: 0,
@@ -19,12 +19,12 @@ export class AgregarComponent {
     }
     console.log(this.nuevo);
 
-    this.personajes.push(this.nuevo);
+    // this.personajes.push(this.nuevo);
 
     this.nuevo = {
       nombre: '',
       poder: 0,
     };
-    console.log(this.personajes);
+    // console.log(this.personajes);
   }
 }
