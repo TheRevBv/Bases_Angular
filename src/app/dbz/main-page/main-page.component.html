@@ -9,9 +9,12 @@
     </div>
     <div class="coll">
       <!-- [data]="personajes"  -->
-      <app-agregar [nuevo]="nuevo">
-        <!-- [nuevo]="nuevo" -->
+      <app-agregar
+        [nuevo]="nuevo"
+        (onNuevoPersonaje)="agregarNuevoPersonaje($event)"
+      >
       </app-agregar>
+      <!-- [nuevo]="nuevo" -->
     </div>
   </div>
 </div>

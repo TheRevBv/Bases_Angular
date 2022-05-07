@@ -6,7 +6,7 @@ import { Personaje } from '../interfaces/personaje';
   styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent {
-  personajes: Array<Personaje> = [
+  public personajes: Array<Personaje> = [
     {
       nombre: 'Joshua',
       poder: 100000,
@@ -21,4 +21,10 @@ export class MainPageComponent {
     nombre: 'Mtro Roshi',
     poder: 23293,
   };
+
+  agregarNuevoPersonaje(personaje: Personaje) {
+    console.log(personaje);
+    this.personajes.push(personaje);
+    console.log(this.personajes);
+  }
 }
