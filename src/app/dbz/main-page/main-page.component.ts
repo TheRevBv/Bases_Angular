@@ -1,30 +1,24 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/personaje';
+import { DbzService } from '../services/dbz.service';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent {
-  public personajes: Array<Personaje> = [
-    {
-      nombre: 'Joshua',
-      poder: 100000,
-    },
-    {
-      nombre: 'Juan',
-      poder: 1,
-    },
-  ];
+  // public personajes: Array<Personaje> = [];
 
   nuevo: Personaje = {
     nombre: 'Mtro Roshi',
     poder: 23293,
   };
 
-  agregarNuevoPersonaje(personaje: Personaje) {
-    console.log(personaje);
-    this.personajes.push(personaje);
-    console.log(this.personajes);
+  // get personajes(): Personaje[] {
+  //   return this.DbzService.personajes;
+  // }
+
+  constructor(private DbzService: DbzService) {
+    // this.personajes = this.DbzService.personajes;
   }
 }
